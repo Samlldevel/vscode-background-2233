@@ -1,17 +1,17 @@
 {
-    "name": "background",
-    "displayName": "background",
+    "name": "background-2233",
+    "displayName": "background-2233",
     "description": "A simple tool to make your vscode's background look better!",
-    "version": "1.1.19",
-    "publisher": "shalldie",
+    "version": "1.0.0",
+    "publisher": "journey-ad",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/shalldie/vscode-background.git"
+        "url": "git+https://github.com/journey-ad/vscode-background-2233.git"
     },
     "engines": {
         "vscode": "^1.17.0"
     },
-    "icon": "vscode-background-logo.png",
+    "icon": "vscode-background-2233-logo.png",
     "categories": [
         "Other"
     ],
@@ -20,59 +20,43 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-            {
-                "command": "extension.background.info",
-                "title": "Background - Info"
-            }
-        ],
+        "commands": [{
+            "command": "extension.background-2233.info",
+            "title": "2233-Background - Info"
+        }],
         "configuration": {
             "type": "object",
-            "title": "Plugin background config. background 插件配置",
+            "title": "Background-2233 插件配置",
             "properties": {
-                "background.enabled": {
+                "background-2233.enabled": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Plugin background enabled.background 插件是否启用"
+                    "description": "background-2233 插件是否启用"
                 },
-                "background.useFront": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "If use front image,which means image is placed on the top of your code. 是否使用前景图，这样会使图片放在代码的顶部"
-                },
-                "background.style": {
-                    "type": "object",
-                    "default": {
-                        "content": "''",
-                        "pointer-events": "none",
-                        "position": "absolute",
-                        "z-index": "99999",
-                        "width": "100%",
-                        "height": "100%",
-                        "background-position": "100% 100%",
-                        "background-repeat": "no-repeat",
-                        "opacity": 1
-                    },
-                    "description": "Custom common style.自定义各项公有样式."
-                },
-                "background.styles": {
-                    "type": "array",
-                    "default": [
-                        {},
-                        {},
-                        {}
+                "background-2233.type": {
+                    "type": "string",
+                    "enum": [
+                        "left",
+                        "right",
+                        "walking"
                     ],
-                    "description": "Each style of backgrounds. 每一个背景图的独有样式。"
+                    "default": "walking",
+                    "description": "设置移动方式"
                 },
-                "background.useDefault": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Use default images.使用默认图片"
+                "background-2233.moveTime": {
+                    "type": "number",
+                    "default": 12,
+                    "description": "移动消耗时间，单位为秒"
                 },
-                "background.customImages": {
-                    "type": "array",
-                    "default": [],
-                    "description": "Your custom Images(Max length is 3). 自己定制背景图，最多3个"
+                "background-2233.standTime": {
+                    "type": "number",
+                    "default": 32,
+                    "description": "站立消耗时间，单位为秒"
+                },
+                "background-2233.opacity": {
+                    "type": "number",
+                    "default": 0.5,
+                    "description": "透明度，范围[0,1]"
                 }
             }
         }

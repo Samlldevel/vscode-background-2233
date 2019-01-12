@@ -32,9 +32,9 @@ enum FileType {
  * 插件逻辑类
  * 
  * @export
- * @class Background
+ * @class Background2233
  */
-class Background {
+class Background2233 {
 
     //#region private fields 私有字段
 
@@ -43,9 +43,9 @@ class Background {
      * 
      * @private
      * @type {*}
-     * @memberof Background
+     * @memberof Background2233
      */
-    private config: any = vscode.workspace.getConfiguration('background');
+    private config: any = vscode.workspace.getConfiguration('background-2233');
 
     //#endregion
 
@@ -56,7 +56,7 @@ class Background {
      * 
      * @private
      * @returns {string} 
-     * @memberof Background
+     * @memberof Background2233
      */
     private getCssContent(): string {
         return fs.readFileSync(vscodePath.cssPath, 'utf-8');
@@ -67,7 +67,7 @@ class Background {
      * 
      * @private
      * @param {string} content 
-     * @memberof Background
+     * @memberof Background2233
      */
     private saveCssContent(content: string): void {
         fs.writeFileSync(vscodePath.cssPath, content, 'utf-8');
@@ -78,7 +78,7 @@ class Background {
      * 初始化
      * 
      * @private
-     * @memberof Background
+     * @memberof Background2233
      */
     private initialize(): void {
 
@@ -98,7 +98,7 @@ class Background {
      * 
      * @private
      * @returns {boolean} 是否初次加载
-     * @memberof Background
+     * @memberof Background2233
      */
     private checkFirstload(): boolean {
         const configPath = path.join(__dirname, '../assets/config.json');
@@ -122,20 +122,20 @@ class Background {
      * 
      * @private
      * @returns {FileType} 
-     * @memberof Background
+     * @memberof Background2233
      */
     private getFileType(): FileType {
         let cssContent = this.getCssContent();
 
         // 未 hack 过
-        let ifUnInstall: boolean = !~cssContent.indexOf(`background.ver`);
+        let ifUnInstall: boolean = !~cssContent.indexOf(`background-2233.ver`);
 
         if (ifUnInstall) {
             return FileType.empty;
         }
 
         // hack 过的旧版本
-        let ifVerOld: boolean = !~cssContent.indexOf(`/*background.ver.${version}*/`);
+        let ifVerOld: boolean = !~cssContent.indexOf(`/*background-2233.ver.${version}*/`);
 
         if (ifVerOld) {
             fs.writeFileSync(path.join(__dirname, '../xxx.css'), cssContent, 'utf-8');
@@ -152,12 +152,12 @@ class Background {
      * @private
      * @param {boolean} [refresh] 需要更新
      * @returns {void} 
-     * @memberof Background
+     * @memberof Background2233
      */
     private install(refresh?: boolean): void {
 
         let lastConfig = this.config;  // 之前的配置
-        let config = vscode.workspace.getConfiguration('background'); // 当前用户配置
+        let config = vscode.workspace.getConfiguration('background-2233'); // 当前用户配置
 
         // 1.如果配置文件改变到时候，当前插件配置没有改变，则返回
         if (!refresh && JSON.stringify(lastConfig) == JSON.stringify(config)) {
@@ -179,19 +179,14 @@ class Background {
         // 4.如果关闭插件
         if (!config.enabled) {
             this.uninstall();
-            vsHelp.showInfoRestart('Background has been uninstalled! Please restart.');
+            vsHelp.showInfoRestart('Background-2233 has been uninstalled! Please restart.');
             return;
         }
 
         // 5.hack 样式
-        let arr = []; // 默认图片
-
-        if (!config.useDefault) { // 自定义图片
-            arr = config.customImages;
-        }
 
         // 自定义的样式内容
-        let content = getCss(arr, config.style, config.styles, config.useFront).replace(/\s*$/, ''); // 去除末尾空白
+        let content = getCss(config.type, config.moveTime, config.standTime, config.opacity).replace(/\s*$/, ''); // 去除末尾空白
 
         // 添加到原有样式(尝试删除旧样式)中
         let cssContent = this.getCssContent();
@@ -199,7 +194,7 @@ class Background {
         cssContent += content;
 
         this.saveCssContent(cssContent);
-        vsHelp.showInfoRestart('Background has been changed! Please restart.');
+        vsHelp.showInfoRestart('Background-2233 has been changed! Please restart.');
 
     }
 
@@ -207,7 +202,7 @@ class Background {
      * 卸载
      * 
      * @private
-     * @memberof Background
+     * @memberof Background2233
      */
     private uninstall(): boolean {
         try {
@@ -228,10 +223,10 @@ class Background {
      * @private
      * @param {string} content 
      * @returns {string} 
-     * @memberof Background
+     * @memberof Background2233
      */
     private clearCssContent(content: string): string {
-        content = content.replace(/\/\*css-background-start\*\/[\s\S]*?\/\*css-background-end\*\//g, '');
+        content = content.replace(/\/\*background-2233-start\*\/[\s\S]*?\/\*background-2233-end\*\//g, '');
         content = content.replace(/\s*$/, '');
         return content;
     }
@@ -244,7 +239,7 @@ class Background {
      * 初始化，并开始监听配置文件改变
      * 
      * @returns {vscode.Disposable} 
-     * @memberof Background
+     * @memberof Background2233
      */
     public watch(): vscode.Disposable {
         this.initialize();
@@ -254,4 +249,4 @@ class Background {
     //#endregion
 }
 
-export default new Background();
+export default new Background2233();

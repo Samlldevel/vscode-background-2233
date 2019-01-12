@@ -1,18 +1,18 @@
-# vscode-background
+# vscode-background-2233
 
-[![Version](https://vsmarketplacebadge.apphb.com/version/shalldie.background.svg)](https://marketplace.visualstudio.com/items?itemName=shalldie.background)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs/shalldie.background.svg)](https://marketplace.visualstudio.com/items?itemName=shalldie.background)
-[![Ratings](https://vsmarketplacebadge.apphb.com/rating/shalldie.background.svg)](https://vsmarketplacebadge.apphb.com/rating/shalldie.background.svg)
+[![Version](https://vsmarketplacebadge.apphb.com/version/journey-ad.background-2233.svg)](https://marketplace.visualstudio.com/items?itemName=journey-ad.background-2233)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/journey-ad.background-2233.svg)](https://marketplace.visualstudio.com/items?itemName=journey-ad.background-2233)
+[![Ratings](https://vsmarketplacebadge.apphb.com/rating/journey-ad.background-2233.svg)](https://vsmarketplacebadge.apphb.com/rating/journey-ad.background-2233.svg)
 
-## Add a lovely background-image to your vscode.
+## Add a lovely poster girl 2233 to your vscode.
 
-GitHub: [https://github.com/shalldie/vscode-background](https://github.com/shalldie/vscode-background)
+GitHub: [https://github.com/journey-ad/vscode-background-2233](https://github.com/journey-ad/vscode-background-2233)
 
-Vscode Market: [https://marketplace.visualstudio.com/items?itemName=shalldie.background](https://marketplace.visualstudio.com/items?itemName=shalldie.background)
+Vscode Market: [https://marketplace.visualstudio.com/items?itemName=journey-ad.background-2233](https://marketplace.visualstudio.com/items?itemName=journey-ad.background-2233)
 
 ## It looks like:
 
-![](https://user-images.githubusercontent.com/9987486/40583705-7105dda8-61c6-11e8-935a-3c5d475a1eb1.gif)
+![2233](https://user-images.githubusercontent.com/16256221/51068037-46f3f300-1653-11e9-8604-a2c70eee4a4a.gif)
 
 ## Warns 警告：
 
@@ -32,23 +32,17 @@ This is the reason:
 
 | Name                      |      Type       | Description                                                                                 |
 | :------------------------ | :-------------: | :------------------------------------------------------------------------------------------ |
-| `background.enabled`      |    `Boolean`    | 插件是否启用 <br> If background enabled.                                                    |
-| `background.useDefault`   |    `Boolean`    | 是否使用默认图片 <br> If use default images.                                                |
-| `background.customImages` | `Array<String>` | 自定义图片，最多 3 个<br> Your Your custom Images(Max length is 3)                          |
-| `background.style`        |    `Object`     | 自定义样式 <br> Custom style                                                                |
-| `background.styles`       | `Array<Object>` | 每个图片的独立样式 <br> Style of each image.                                                |
-| `background.useFront`     |    `Boolean`    | 前景图/背景图。 在代码上面还是下面 <br> `true`:On the top of code. `false`: Behind the code |
-
-## Notice 提示
-
-**http** 协议的外链图片在当前版本不能使用(vscode 限制)，需要用 **https** 协议开头的外链地址。
-
-You should use protocol **https** instead of **http** to the image,which is not support by vscode now.
+| `background-2233.enabled`      |    `Boolean`    | 插件是否启用                                                    |
+| `background-2233.moveTime`   |    `Number`    | 移动消耗时间，单位为秒                                                |
+| `background-2233.standTime` | `Number` | 站立消耗时间，单位为秒                          |
+| `background-2233.opacity`        |    `Number`     | 透明度，范围[0,1]                                                                |
+| `background-2233.type`       | `String` | 设置移动方式                                                |
 
 ## Uninstall 卸载
 
-    Set the config  {"background.enabled": false}  in settings.json,then uninstall the plugin.
-    在 settings.json 中设置 {"background.enabled": false} ，然后再删除插件。如果直接删除插件会有遗留，就需要重装vscode了。
+    Set the config  {"background-2233.enabled": false}  in settings.json,then uninstall the plugin.
+    在 settings.json 中设置 {"background-2233.enabled": false} ，然后再删除插件。
+    如果直接删除插件会有遗留，需要重装插件，然后按照正确方法清理配置。
 
 ### Q&A 常见问题:
 
@@ -72,11 +66,16 @@ You should use protocol **https** instead of **http** to the image,which is not 
 
 In ubuntu:[https://github.com/shalldie/vscode-background/issues/6](https://github.com/shalldie/vscode-background/issues/6).
 
-Press F1,and you can get it by enter **ext install background** in your vscode. (～￣ ▽ ￣)～
-<br />
-<br />
-你可以在 vscode 中，按下 F1，然后输入 **ext install background** 来下载她 (～￣ ▽ ￣)～
+Press F1,and you can get it by enter **ext install background-2233** in your vscode. (～￣ ▽ ￣)～
+
+你可以在 vscode 中，按下 F1，然后输入 **ext install background-2233** 来下载她 (～￣ ▽ ￣)～
 
 ---
 
 **Enjoy!**
+
+## Credits 托您的福
+
+- [shalldie/vscode-background](https://github.com/shalldie/vscode-background)
+
+- [Bilibili Inc.](https://bilibili.com)
